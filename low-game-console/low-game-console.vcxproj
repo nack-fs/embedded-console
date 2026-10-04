@@ -142,7 +142,8 @@
     <ClCompile Include="main\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="screen\screen.h" />
+    <ClInclude Include="screen\die-hard\DieHard.h" />
+    <ClInclude Include="screen\IScreen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
