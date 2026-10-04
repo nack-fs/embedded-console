@@ -143,6 +143,7 @@
     <ClCompile Include="screen\die-hard\DieHard.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="console\LGC.h" />
     <ClInclude Include="screen\die-hard\DieHard.h" />
     <ClInclude Include="screen\IScreen.h" />
   </ItemGroup>
