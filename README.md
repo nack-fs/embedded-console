@@ -1,1 +1,1 @@
-A experiment to boost performance of a simulated console, taking adventages of all the capabilities of C++, the purpose is to use OO with Patern Designs but reducing the resources as much as posible, with an optimal version as a result.
+An experiment to boost the performance of a simulated console by taking advantage of modern C++ features. The goal is to combine Object Oriented Design Patterns with minimal resource use, resulting in an optimized runtime.
