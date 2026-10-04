@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "../../console/LGC.h"
 
 class DieHard {
 	friend class DieHardAdapter;
@@ -11,7 +12,11 @@ private:
 	int _playerX = 0, _playerY = 0;
 	int _exitX = 0, _exitY = 0;
 
+	LowGameConsole::LGC& _game;
+
 public:
+	DieHard(LowGameConsole::LGC& game) : _game(game) {}
+
 	void initializeDie();
 	void checkDieFinished();
 	void renderDie() const;
