@@ -139,6 +139,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="console\LGC.cpp" />
     <ClCompile Include="main\main.cpp" />
     <ClCompile Include="screen\die-hard\DieHard.cpp" />
   </ItemGroup>
