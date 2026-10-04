@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="low-game-console/low-game-console.vcxproj" Id="3e05e86f-fcd4-4077-a3a2-efae3cf1d57c" />
+</Solution>
