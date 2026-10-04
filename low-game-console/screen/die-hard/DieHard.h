@@ -2,6 +2,8 @@
 #include <iostream>
 
 class DieHard {
+	friend class DieHardAdapter;
+
 private:
 	static constexpr int WIDTH = 14;
 	static constexpr int HEIGHT = 7;
