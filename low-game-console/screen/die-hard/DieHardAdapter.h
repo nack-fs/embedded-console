@@ -11,11 +11,11 @@ public:
 	DieHardAdapter(LowGameConsole::LGC& game);
 	~DieHardAdapter() override = default;
 
-	void buttonUp() const override;
-	void buttonDown() const override;
-	void buttonLeft() const override;
-	void buttonRight() const override;
-	void buttonBack() const override;
-	void render() const override;
-	void reset() const override;
+	void buttonUp() override;
+	void buttonDown() override;
+	void buttonLeft() override;
+	void buttonRight() override;
+	void buttonBack() override;
+	void render() override;
+	void reset() override;
 };

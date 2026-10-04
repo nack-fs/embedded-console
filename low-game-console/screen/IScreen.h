@@ -6,13 +6,13 @@ namespace lgc_screen {
 	public:
 		virtual ~IScreen() = default;
 
-		virtual void buttonUp() const = 0;
-		virtual void buttonDown() const = 0;
-		virtual void buttonLeft() const = 0;
-		virtual void buttonRight() const = 0;
-		virtual void buttonBack() const = 0;
-		virtual void render() const = 0;
-		virtual void reset() const = 0;
+		virtual void buttonUp() = 0;
+		virtual void buttonDown() = 0;
+		virtual void buttonLeft() = 0;
+		virtual void buttonRight() = 0;
+		virtual void buttonBack() = 0;
+		virtual void render() = 0;
+		virtual void reset() = 0;
 	};
 
 }
