@@ -30,11 +30,11 @@ namespace LowGameConsole {
 		void createScenes();
 
 		// --- Console Buttons ---
-		void upClick();
-		void downClick();
-		void leftClick();
-		void rightClick();
-		void backClick();
+		void upClick() { _currentScreen->buttonUp(); }
+		void downClick() { _currentScreen->buttonDown(); }
+		void leftClick() { _currentScreen->buttonLeft(); }
+		void rightClick() { _currentScreen->buttonRight(); }
+		void backClick() { _currentScreen->buttonBack(); }
 
 		// --- Console methods ---
 		lgc_screen::IScreen* getScreen() const;
@@ -47,13 +47,13 @@ namespace LowGameConsole {
 			}
 		}
 
-		std::map<std::string, std::unique_ptr<lgc_screen::IScreen>>& getScreens() const;
+		const std::map<std::string, std::unique_ptr<lgc_screen::IScreen>>& getScreens() const;
 
 		void setExit(uint8_t exit) {
 			_exit = exit;
 		}
 
-		uint8_t exit() const;
+		const uint8_t exit() const;
 
 		void render() const{
 			_currentScreen->render();
