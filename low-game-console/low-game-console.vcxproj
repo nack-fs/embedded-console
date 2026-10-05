@@ -143,12 +143,13 @@
     <ClCompile Include="main\main.cpp" />
     <ClCompile Include="screen\die-hard\DieHard.cpp" />
     <ClCompile Include="screen\die-hard\DieHardAdapter.cpp" />
+    <ClCompile Include="screen\forza-horizon\ForzaHorizon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="console\LGC.h" />
     <ClInclude Include="screen\die-hard\DieHard.h" />
     <ClInclude Include="screen\die-hard\DieHardAdapter.h" />
-    <ClInclude Include="screen\hot-wheels\HotWheels.h" />
+    <ClInclude Include="screen\forza-horizon\ForzaHorizon.h" />
     <ClInclude Include="screen\IScreen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

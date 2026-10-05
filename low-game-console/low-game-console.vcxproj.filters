@@ -30,6 +30,9 @@
     <ClCompile Include="screen\die-hard\DieHardAdapter.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="screen\forza-horizon\ForzaHorizon.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="screen\IScreen.h">
@@ -44,7 +47,7 @@
     <ClInclude Include="screen\die-hard\DieHardAdapter.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="screen\hot-wheels\HotWheels.h">
+    <ClInclude Include="screen\forza-horizon\ForzaHorizon.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
