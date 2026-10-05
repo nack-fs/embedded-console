@@ -30,14 +30,14 @@ namespace LowGameConsole {
 		void createScenes();
 
 		// --- Console Buttons ---
-		void upClick() const;
-		void downClick() const;
-		void leftClick() const;
-		void rightClick() const;
-		void backClick() const;
+		void upClick();
+		void downClick();
+		void leftClick();
+		void rightClick();
+		void backClick();
 
 		// --- Console methods ---
-		lgc_screen::IScreen getScreen() const;
+		lgc_screen::IScreen* getScreen() const;
 
 		void setScreen(std::string screenName) {
 			auto screen = _screens.find(screenName);
@@ -47,7 +47,7 @@ namespace LowGameConsole {
 			}
 		}
 
-		std::map<std::string, lgc_screen::IScreen> getScreens();
+		std::map<std::string, std::unique_ptr<lgc_screen::IScreen>>& getScreens() const;
 
 		void setExit(uint8_t exit) {
 			_exit = exit;

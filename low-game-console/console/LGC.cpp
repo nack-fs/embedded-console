@@ -7,6 +7,6 @@ namespace LowGameConsole {
 	void LGC::createScenes() {
 		_screens["die-hard"] = std::make_unique<DieHardAdapter>(*this);
 
-		setScreen("menu");
+		setScreen("die-hard");
 	}
 }

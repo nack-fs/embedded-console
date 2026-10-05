@@ -8,7 +8,7 @@ void DieHard::initializeDie() {
 
 void DieHard::checkDieFinished() {
 	if (_playerX == _exitX && _playerY == _exitY) {
-		// Pending to check if game has finished
+		_game.gameFinished();
 		std::cout << "You have WON!\n" << std::endl;
 	}
 }
@@ -44,9 +44,9 @@ void DieHard::renderDie() const{
 
 void DieHard::reset() {
 	std::cout << "----------------------------\n";
-	std::cout << "Die Hard Maze!!!\n";
-	std::cout << "(W/S -> up/down. A/D -> left/right)\n";
-	std::cout << "(C -> menu)\n";
+	std::cout << "Yipi Kai Yay!!!\n";
+	std::cout << "[W/S -> up/down. A/D -> left/right]\n";
+	std::cout << "[C -> menu]\n";
 
 	initializeDie();
 }
