@@ -44,5 +44,8 @@
     <ClInclude Include="screen\die-hard\DieHardAdapter.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="screen\hot-wheels\HotWheels.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
