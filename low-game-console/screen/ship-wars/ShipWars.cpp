@@ -8,14 +8,14 @@ ShipWars::ShipWars(LowGameConsole::LGC& console) : _console(console) {}
 
 void ShipWars::initializeShipWars() {
 	_rivals = {
+		RedTeam::EMPTY,
+		RedTeam::EMPTY,
 		RedTeam::ENEMY,
+		RedTeam::EMPTY,
+		RedTeam::EMPTY,
 		RedTeam::ENEMY,
-		RedTeam::ENEMY,
-		RedTeam::ENEMY,
-		RedTeam::ENEMY,
-		RedTeam::ENEMY,
-		RedTeam::ENEMY,
-		RedTeam::ENEMY,
+		RedTeam::EMPTY,
+		RedTeam::EMPTY,
 		RedTeam::ENEMY,
 	};
 
@@ -41,7 +41,7 @@ void ShipWars::fire() {
 
 		if (noRivals) {
 			_console.gameFinished();
-			std::cout << "Well done!! There are no enemies in sight.";
+			std::cout << "Well done!! There are no enemies in sight.\n";
 		}
 	}
 }
