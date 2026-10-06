@@ -1,13 +1,20 @@
 #include "LGC.h"
 
 #include "../screen/die-hard/DieHardAdapter.h"
+#include "../screen/forza-horizon/ForzaHorizonAdapter.h"
+#include "../screen/ship-wars/ShipWarsAdapter.h"
+#include "../screen/menu/MenuAdapter.h"
 
 namespace LowGameConsole {
 
 	void LGC::createScenes() {
-		_screens["die-hard"] = std::make_unique<DieHardAdapter>(*this);
+		_screens["Die Hard"] = std::make_unique<DieHardAdapter>(*this);
+		_screens["Forza Horizon"] = std::make_unique<ForzaHorizonAdapter>(*this);
+		_screens["Ship Wars"] = std::make_unique<ShipWarsAdapter>(*this);
 
-		setScreen("die-hard");
+		_screens["menu"] = std::make_unique<MenuAdapter>(*this);
+
+		setScreen("menu");
 	}
 
 	lgc_screen::IScreen* LGC::getScreen() const {
@@ -18,7 +25,7 @@ namespace LowGameConsole {
 		return _screens;
 	}
 
-	const uint8_t LGC::exit() const {
+	const GameState LGC::exit() const {
 		return _exit;
 	}
 }

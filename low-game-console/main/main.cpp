@@ -1,13 +1,9 @@
 #include <iostream>
 #include <cctype>
 #include <string>
-#include "../console/LGC.h"
 #include <stdexcept>
 
-int main(std::string args[]) {
-	std::cout << "Game Console Low - Resources" << std::endl;
-
-}
+#include "../console/LGC.h"
 
 static char getKey() {
 	const std::string validKeys = "WASDC";
@@ -21,7 +17,7 @@ static char getKey() {
 	return nextChar;
 }
 
-static void test(LowGameConsole::LGC console) {
+static void test(LowGameConsole::LGC& console) {
 	do {
 		console.render();
 		char key = getKey();
@@ -35,6 +31,11 @@ static void test(LowGameConsole::LGC console) {
 		default:
 			throw std::invalid_argument("Invalid Key");
 		}
-	} while (!console.exit());
+	} while (!static_cast<uint8_t>(console.exit()));
 }
 
+int main() {
+	LowGameConsole::LGC console;
+	test(console);
+	return 0;
+}
