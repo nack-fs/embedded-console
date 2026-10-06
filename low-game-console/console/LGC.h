@@ -22,7 +22,7 @@ namespace LowGameConsole {
 	private:
 		std::map<std::string, std::unique_ptr<lgc_screen::IScreen>> _screens;
 		lgc_screen::IScreen* _currentScreen = nullptr;
-		uint8_t _exit;
+		GameState _exit;
 
 	public:
 		LGC() {createScenes();}
@@ -49,11 +49,11 @@ namespace LowGameConsole {
 
 		const std::map<std::string, std::unique_ptr<lgc_screen::IScreen>>& getScreens() const;
 
-		void setExit(uint8_t exit) {
-			_exit = exit;
+		void setExit(GameState state) {
+			_exit = state;
 		}
 
-		const uint8_t exit() const;
+		const GameState exit() const;
 
 		void render() const{
 			_currentScreen->render();

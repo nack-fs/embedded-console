@@ -145,6 +145,8 @@
     <ClCompile Include="screen\die-hard\DieHardAdapter.cpp" />
     <ClCompile Include="screen\forza-horizon\ForzaHorizon.cpp" />
     <ClCompile Include="screen\forza-horizon\ForzaHorizonAdapter.cpp" />
+    <ClCompile Include="screen\menu\Menu.cpp" />
+    <ClCompile Include="screen\menu\MenuAdapter.cpp" />
     <ClCompile Include="screen\ship-wars\ShipWars.cpp" />
     <ClCompile Include="screen\ship-wars\ShipWarsAdapter.cpp" />
   </ItemGroup>
@@ -155,6 +157,8 @@
     <ClInclude Include="screen\forza-horizon\ForzaHorizon.h" />
     <ClInclude Include="screen\forza-horizon\ForzaHorizonAdapter.h" />
     <ClInclude Include="screen\IScreen.h" />
+    <ClInclude Include="screen\menu\Menu.h" />
+    <ClInclude Include="screen\menu\MenuAdapter.h" />
     <ClInclude Include="screen\ship-wars\ShipWars.h" />
     <ClInclude Include="screen\ship-wars\ShipWarsAdapter.h" />
   </ItemGroup>
