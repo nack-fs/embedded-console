@@ -8,15 +8,15 @@ ShipWars::ShipWars(LowGameConsole::LGC& console) : _console(console) {}
 
 void ShipWars::initializeShipWars() {
 	_rivals = {
-		RedTeam::EMPTY,
-		RedTeam::EMPTY,
-		RedTeam::EMPTY,
-		RedTeam::EMPTY,
-		RedTeam::EMPTY,
-		RedTeam::EMPTY,
-		RedTeam::EMPTY,
-		RedTeam::EMPTY,
-		RedTeam::EMPTY,
+		RedTeam::ENEMY,
+		RedTeam::ENEMY,
+		RedTeam::ENEMY,
+		RedTeam::ENEMY,
+		RedTeam::ENEMY,
+		RedTeam::ENEMY,
+		RedTeam::ENEMY,
+		RedTeam::ENEMY,
+		RedTeam::ENEMY,
 	};
 
 	_obstacles.clear();

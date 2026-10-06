@@ -2,6 +2,7 @@
 #include <cctype>
 #include <string>
 #include <stdexcept>
+#include <windows.h>
 
 #include "../console/LGC.h"
 
@@ -35,6 +36,9 @@ static void test(LowGameConsole::LGC& console) {
 }
 
 int main() {
+	SetConsoleOutputCP(CP_UTF8);
+	SetConsoleCP(CP_UTF8);
+
 	LowGameConsole::LGC console;
 	test(console);
 	return 0;

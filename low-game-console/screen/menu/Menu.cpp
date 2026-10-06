@@ -10,11 +10,12 @@ Menu::Menu(LowGameConsole::LGC& console) :
 }
 
 void Menu::renderMenu() {
-	std::cout << "\n--------------------";
-	std::cout << "Select a game: [W/S -> up/down. D -> play game]";
+	std::cout << std::string(60, '/') << std::endl;
+	std::cout << "Select a game: [W/S -> up/down. D -> play game]\n";
 	for (int i = 0; i < _games.size(); i++) {
-		std::cout << (i == _selectedGame) ? " >> " : "    ";
-		std::cout << _games[i];
+		std::cout << ((i == _selectedGame) ? " >> " : "    ");
+		std::cout << _games[i] << "\n";
 	}
-	std::cout << "[C -> turn off]";
+	std::cout << "[C -> turn off]\n";
+	std::cout << std::string(60, '/') << std::endl;
 }
