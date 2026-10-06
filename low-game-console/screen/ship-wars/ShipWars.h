@@ -27,6 +27,6 @@ public:
 	void initializeShipWars();
 	void fire();
 	void renderShipWars();
-	void renderLine();
+	void renderLine(int size);
 	void reset();
 };
