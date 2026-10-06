@@ -7,6 +7,8 @@
 #include "../../console/LGC.h"
 
 class ShipWars {
+	friend class ShipWarsAdapter;
+
 private:
 	int _shipX = 0;
 

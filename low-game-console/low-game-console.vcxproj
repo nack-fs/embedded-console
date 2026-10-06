@@ -146,6 +146,7 @@
     <ClCompile Include="screen\forza-horizon\ForzaHorizon.cpp" />
     <ClCompile Include="screen\forza-horizon\ForzaHorizonAdapter.cpp" />
     <ClCompile Include="screen\ship-wars\ShipWars.cpp" />
+    <ClCompile Include="screen\ship-wars\ShipWarsAdapter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="console\LGC.h" />
@@ -155,6 +156,7 @@
     <ClInclude Include="screen\forza-horizon\ForzaHorizonAdapter.h" />
     <ClInclude Include="screen\IScreen.h" />
     <ClInclude Include="screen\ship-wars\ShipWars.h" />
+    <ClInclude Include="screen\ship-wars\ShipWarsAdapter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
