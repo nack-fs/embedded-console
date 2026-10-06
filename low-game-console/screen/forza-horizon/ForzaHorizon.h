@@ -5,9 +5,11 @@
 #include "../../console/LGC.h"
 
 class ForzaHorizon {
+    friend class ForzaHorizonAdapter;
+
 private:
-	static constexpr char GOAL = 'X';
-	static constexpr char PATH = '*';
+	static constexpr const char* GOAL = "X";
+	static constexpr const char* PATH = "*";
 
 	static constexpr int ROAD_WIDTH = 6;
 	static constexpr int ROWS_ABOVE = 6;
@@ -16,17 +18,17 @@ private:
 	int _carX = 0, _carY = 0;
 
 	std::array<std::string, 11> _road = {
-        "  " + GOAL,
-        "  " + PATH,
-        "    " + PATH,
-        "     " + PATH,
-        "      " + PATH,
-        "      " + PATH,
-        "      " + PATH,
-        "    " + PATH,
-        "  " + PATH,
-        " " + PATH,
-        " " + PATH
+        std::string("  ") + GOAL,
+        std::string("  ") + PATH,
+        std::string("    ") + PATH,
+        std::string("     ") + PATH,
+        std::string("      ") + PATH,
+        std::string("      ") + PATH,
+        std::string("      ") + PATH,
+        std::string("    ") + PATH,
+        std::string("  ") + PATH,
+        std::string(" ") + PATH,
+        std::string(" ") + PATH
 	};
 
     LowGameConsole::LGC& _console;
