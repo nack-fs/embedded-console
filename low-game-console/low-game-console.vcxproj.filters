@@ -48,6 +48,9 @@
     <ClCompile Include="screen\menu\MenuAdapter.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="allocator\ArenaAllocator.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="screen\IScreen.h">
