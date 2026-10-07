@@ -80,5 +80,8 @@
     <ClInclude Include="screen\menu\MenuAdapter.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="allocator\ArenaAllocator.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
