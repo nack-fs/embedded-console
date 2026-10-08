@@ -1,1 +1,1 @@
-An experiment to boost the performance of a simulated console by taking advantage of modern C++ features. The goal is to combine Object Oriented Design Patterns with minimal resource use, resulting in an optimized runtime.
+An experiment to boost the performance of a simulated console by taking advantage of modern C++ features. The goal is to combine Object Oriented Design Patterns with minimal resource use, resulting in an optimized runtime. Additionally, a custom arena allocator is implemented to minimize memory and eliminate heap fragmentation.
