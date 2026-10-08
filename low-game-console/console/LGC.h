@@ -6,8 +6,16 @@
 #include <cstdint>
 
 #include "../screen/IScreen.h"
+#include "../allocator/ArenaAllocator.h"
 
 namespace LowGameConsole {
+
+	enum class ScreenID : uint8_t {
+		Menu,
+		DieHard,
+		ForzaHorizon,
+		ShipWars
+	};
 	
 	enum class GameState : uint8_t {
 		OK,
@@ -20,7 +28,10 @@ namespace LowGameConsole {
 
 	class LGC {
 	private:
-		std::map<std::string, std::unique_ptr<lgc_screen::IScreen>> _screens;
+		static constexpr size_t RAM_SIZE = 2 * 1024;
+		uint8_t _RAM[RAM_SIZE];
+
+		allocator::ArenaAllocator _allocator;
 		lgc_screen::IScreen* _currentScreen = nullptr;
 		GameState _exit;
 
@@ -39,15 +50,7 @@ namespace LowGameConsole {
 		// --- Console methods ---
 		lgc_screen::IScreen* getScreen() const;
 
-		void setScreen(std::string screenName) {
-			auto screen = _screens.find(screenName);
-			if (screen != _screens.end()) {
-				_currentScreen = screen->second.get();
-				restart();
-			}
-		}
-
-		const std::map<std::string, std::unique_ptr<lgc_screen::IScreen>>& getScreens() const;
+		void setScreen(ScreenID screenID);
 
 		void setExit(GameState state) {
 			_exit = state;
@@ -61,7 +64,7 @@ namespace LowGameConsole {
 
 		void gameFinished() {
 			render();
-			setScreen("menu");
+			setScreen(ScreenID::Menu);
 		}
 
 		void restart() const{

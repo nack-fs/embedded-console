@@ -8,21 +8,45 @@
 namespace LowGameConsole {
 
 	void LGC::createScenes() {
-		_screens["Die Hard"] = std::make_unique<DieHardAdapter>(*this);
-		_screens["Forza Horizon"] = std::make_unique<ForzaHorizonAdapter>(*this);
-		_screens["Ship Wars"] = std::make_unique<ShipWarsAdapter>(*this);
+		_allocator.init_arena(_RAM, RAM_SIZE);
+		setScreen(LowGameConsole::ScreenID::Menu);
+	}
 
-		_screens["menu"] = std::make_unique<MenuAdapter>(*this);
+	void LGC::setScreen(ScreenID screenID) {
+		if (_currentScreen != nullptr) {
+			_currentScreen->~IScreen();
+			_currentScreen = nullptr;
+		}
+		_allocator.reset();
 
-		setScreen("menu");
+		switch (screenID) {
+			case ScreenID::Menu: {
+				void* memory = _allocator.alloc(sizeof(MenuAdapter));
+				_currentScreen = new (memory) MenuAdapter(*this);
+				break;
+			}
+			case ScreenID::DieHard: {
+				void* memory = _allocator.alloc(sizeof(DieHardAdapter));
+				_currentScreen = new (memory) DieHardAdapter(*this);
+				break;
+			}
+			case ScreenID::ForzaHorizon: {
+				void* memory = _allocator.alloc(sizeof(ForzaHorizonAdapter));
+				_currentScreen = new (memory) ForzaHorizonAdapter(*this);
+				break;
+			}
+			case ScreenID::ShipWars: {
+				void* memory = _allocator.alloc(sizeof(ShipWarsAdapter));
+				_currentScreen = new (memory) ShipWarsAdapter(*this);
+				break;
+			}
+		}
+
+		restart();
 	}
 
 	lgc_screen::IScreen* LGC::getScreen() const {
 		return _currentScreen;
-	}
-
-	const std::map<std::string, std::unique_ptr<lgc_screen::IScreen>>& LGC::getScreens() const{
-		return _screens;
 	}
 
 	const GameState LGC::exit() const {
