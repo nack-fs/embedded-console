@@ -9,7 +9,7 @@ void MenuAdapter::buttonUp(){
 }
 
 void MenuAdapter::buttonDown(){
-	if (_API._selectedGame < _API._games.size() - 1) {
+	if (_API._selectedGame < _API.N_REGISTRED - 1) {
 		_API._selectedGame++;
 	}
 }
@@ -17,7 +17,7 @@ void MenuAdapter::buttonDown(){
 void MenuAdapter::buttonLeft(){}
 
 void MenuAdapter::buttonRight(){
-	_API._console.setScreen(_API._games[_API._selectedGame]);
+	_API._console.setScreen(_API._registredGames[_API._selectedGame].screenID);
 }
 
 void MenuAdapter::buttonBack(){
@@ -25,7 +25,7 @@ void MenuAdapter::buttonBack(){
 		_API._console.setExit(LowGameConsole::GameState::Default_Exit);
 	}
 	else {
-		_API._console.setScreen("menu");
+		_API._console.setScreen(LowGameConsole::ScreenID::Menu);
 	}
 }
 
