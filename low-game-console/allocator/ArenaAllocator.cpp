@@ -11,15 +11,14 @@ namespace allocator {
 	}
 
 	void* ArenaAllocator::alloc(size_t request) {
-		if (_offset + request > _capacity) {
-			throw std::exception("The Arena has not free space...");
+		size_t alignedOffset = (_offset + BUS_WIDTH - 1) & ~(BUS_WIDTH - 1);
+		if (alignedOffset + request > _capacity) {
+			throw std::runtime_error("The Arena has not free space...");
 		}
 
-		size_t newOffset = _offset + request;
-		newOffset = (newOffset + BUS_WIDTH - 1) & ~(BUS_WIDTH - 1);
-		_offset = newOffset;
+		void* ptr = (void*)&_buffer[alignedOffset];
+		_offset = alignedOffset + request;
 
-		void* ptr = (void*)_buffer[_offset];
 		return ptr;
 	}
 
