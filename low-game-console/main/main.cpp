@@ -5,6 +5,7 @@
 #include <windows.h>
 
 #include "../console/LGC.h"
+#include "../hardware/Joystick.h"
 
 static char getKey() {
 	const std::string validKeys = "WASDC";
@@ -39,6 +40,8 @@ int main() {
 	SetConsoleOutputCP(CP_UTF8);
 	SetConsoleCP(CP_UTF8);
 
+	hardware::Joystick joystick;
+	joystick.test();
 	LowGameConsole::LGC console;
 	test(console);
 	return 0;

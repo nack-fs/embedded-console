@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="allocator\ArenaAllocator.cpp" />
     <ClCompile Include="console\LGC.cpp" />
+    <ClCompile Include="hardware\Joystick.cpp" />
     <ClCompile Include="main\main.cpp" />
     <ClCompile Include="screen\die-hard\DieHard.cpp" />
     <ClCompile Include="screen\die-hard\DieHardAdapter.cpp" />
@@ -154,6 +155,7 @@
   <ItemGroup>
     <ClInclude Include="allocator\ArenaAllocator.h" />
     <ClInclude Include="console\LGC.h" />
+    <ClInclude Include="hardware\Joystick.h" />
     <ClInclude Include="screen\die-hard\DieHard.h" />
     <ClInclude Include="screen\die-hard\DieHardAdapter.h" />
     <ClInclude Include="screen\forza-horizon\ForzaHorizon.h" />
