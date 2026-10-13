@@ -68,7 +68,7 @@ void ForzaHorizon::renderRow(int row) const{
 				}
 			}
 
-			std::println(line);
+			std::println("{}",line);
 		}
 	}
 }

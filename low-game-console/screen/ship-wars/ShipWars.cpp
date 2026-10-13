@@ -58,14 +58,14 @@ void ShipWars::renderShipWars() {
 
 	std::print("|");
 	for (const auto r : _rivals) {
-		std::cout << (r == RedTeam::EMPTY? " " : "¥");
+		std::print("{}", r == RedTeam::EMPTY ? " " : "¥");
 	}
 	std::println("|");
 	renderLine(screenSize);
 
 	std::print("|");
 	for (const auto o : _obstacles) {
-		std::print(_typeObstacles[o]);
+		std::print("{}", _typeObstacles[o]);
 	}
 	std::println("|");
 	renderLine(screenSize);
