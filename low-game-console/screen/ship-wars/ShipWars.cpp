@@ -3,6 +3,7 @@
 #include <string>
 #include <iostream>
 #include <algorithm>
+#include <print>
 
 ShipWars::ShipWars(LowGameConsole::LGC& console) : _console(console) {}
 
@@ -41,56 +42,53 @@ void ShipWars::fire() {
 
 		if (noRivals) {
 			_console.gameFinished();
-			std::cout << "Well done!! There are no enemies in sight.\n";
+			std::println("Well done!! There are no enemies in sight.");
 		}
 	}
 }
 
 void ShipWars::renderShipWars() {
-	std::cout << "\n";
+	std::println();
 
 	int screenSize = static_cast<int>(_rivals.size());
 
-	std::cout << "┌";
-	for (int i = 0; i < screenSize; i++) std::cout << "─";
-	std::cout << "┐\n";
+	std::print("┌");
+	for (int i = 0; i < screenSize; i++) { std::print("─"); }
+	std::println("┐");
 
-	std::cout << "|";
+	std::print("|");
 	for (const auto r : _rivals) {
 		std::cout << (r == RedTeam::EMPTY? " " : "¥");
 	}
-	std::cout << "|\n";
+	std::println("|");
 	renderLine(screenSize);
 
-	std::cout << "|";
+	std::print("|");
 	for (const auto o : _obstacles) {
-		std::cout << _typeObstacles[o];
+		std::print(_typeObstacles[o]);
 	}
-	std::cout << "|\n";
+	std::println("|");
 	renderLine(screenSize);
 
-	std::cout << "│"
-		<< std::string(_shipX, ' ')
-		<< '^'
-		<< std::string(screenSize - _shipX - 1, ' ')
-		<< "│\n";
+	std::println("|{}{}{}|", 
+		std::string(_shipX, ' '), 
+		'^', 
+		std::string(screenSize - _shipX - 1, ' '));
 
-	std::cout << "└";
-	for (int i = 0; i < screenSize; i++) std::cout << "─";
-	std::cout << "┘\n";
+	std::print("└");
+	for (int i = 0; i < screenSize; i++) { std::print("─"); }
+	std::println("┘");
 }
 
 void ShipWars::renderLine(int size) {
-	std::cout << "|"
-		<< std::string(size, ' ')
-		<< "|\n";
+	std::println("|{}|",std::string(size, ' '));
 }
 
 void ShipWars::reset() {
-	std::cout << "----------------------------\n";
-	std::cout << "Ship Wars!\n";
-	std::cout << "[W -> shoot. A/D -> left/right]\n";
-	std::cout << "[C -> menu]\n";
+	std::println("----------------------------");
+	std::println("Ship Wars!");
+	std::println("[W -> shoot. A/D -> left/right]");
+	std::println("[C -> menu]");
 
 	initializeShipWars();
 }

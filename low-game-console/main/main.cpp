@@ -14,7 +14,7 @@ static char getKey() {
 	do {
 		std::cin >> nextChar;
 		nextChar = static_cast<char>(std::toupper(nextChar));
-	} while (validKeys.find(nextChar) == std::string::npos);
+	} while (!validKeys.contains(nextChar));
 
 	return nextChar;
 }
