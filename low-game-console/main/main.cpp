@@ -8,7 +8,7 @@
 #include "../hardware/Joystick.h"
 
 static char getKey() {
-	const std::string validKeys = "WASDC";
+	const std::string validKeys = "WASDCO";
 	char nextChar;
 
 	do {
@@ -25,11 +25,12 @@ static void test(LowGameConsole::LGC& console) {
 		char key = getKey();
 
 		switch (key) {
-		case 'W': console.upClick(); break;
-		case 'S': console.downClick(); break;
-		case 'A': console.leftClick(); break;
-		case 'D': console.rightClick(); break;
-		case 'C': console.backClick(); break;
+		case 'W': console.establishAction(0x1); break;
+		case 'S': console.establishAction(0x2); break;
+		case 'A': console.establishAction(0x4); break;
+		case 'D': console.establishAction(0x8); break;
+		case 'C': console.establishAction(0x10); break;
+		case 'O': console.establishAction(0x80); break; // Security mode
 		default:
 			throw std::invalid_argument("Invalid Key");
 		}

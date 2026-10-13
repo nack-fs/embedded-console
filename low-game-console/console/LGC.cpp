@@ -45,6 +45,11 @@ namespace LowGameConsole {
 		restart();
 	}
 
+	void LGC::establishAction(uint8_t action) {
+		_keypadBuffer.establishOnlyState(action);
+		LGC::executeAction();
+	}
+
 	lgc_screen::IScreen* LGC::getScreen() const {
 		return _currentScreen;
 	}
