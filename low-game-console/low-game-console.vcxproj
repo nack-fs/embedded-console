@@ -110,7 +110,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,6 +142,7 @@
     <ClCompile Include="allocator\ArenaAllocator.cpp" />
     <ClCompile Include="console\LGC.cpp" />
     <ClCompile Include="hardware\Joystick.cpp" />
+    <ClCompile Include="hardware\KeypadChip.cpp" />
     <ClCompile Include="main\main.cpp" />
     <ClCompile Include="screen\die-hard\DieHard.cpp" />
     <ClCompile Include="screen\die-hard\DieHardAdapter.cpp" />
@@ -156,6 +157,7 @@
     <ClInclude Include="allocator\ArenaAllocator.h" />
     <ClInclude Include="console\LGC.h" />
     <ClInclude Include="hardware\Joystick.h" />
+    <ClInclude Include="hardware\KeypadChip.h" />
     <ClInclude Include="screen\die-hard\DieHard.h" />
     <ClInclude Include="screen\die-hard\DieHardAdapter.h" />
     <ClInclude Include="screen\forza-horizon\ForzaHorizon.h" />

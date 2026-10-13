@@ -1,5 +1,6 @@
 #include "ForzaHorizon.h"
 #include <iostream>
+#include <print>
 
 void ForzaHorizon::initializeForzaHorizon() {
 	_carX = 5;
@@ -9,7 +10,7 @@ void ForzaHorizon::initializeForzaHorizon() {
 void ForzaHorizon::checkPos() {
 	if (_carY == 0) {
 		_console.gameFinished();
-		std::cout << "You have arrived to your destination!!" << std::endl;
+		std::println("You have arrived to your destination!!");
 		return;
 	}
 
@@ -18,7 +19,7 @@ void ForzaHorizon::checkPos() {
 	int rightlim = leftlim + ROAD_WIDTH + 1;
 
 	if (_carX <= leftlim || _carX >= rightlim) {
-		std::cout << "Pum! Smash!!" << std::endl;
+		std::println("Pum! Smash!!");
 		initializeForzaHorizon();
 	}
 }
@@ -67,15 +68,15 @@ void ForzaHorizon::renderRow(int row) const{
 				}
 			}
 
-			std::cout << line << std::endl;
+			std::println("{}",line);
 		}
 	}
 }
 
 void ForzaHorizon::reset() {
-	std::cout << "----------------------------" << std::endl;
-	std::cout << "Forza Horizon" << std::endl;
-	std::cout << "[A/D -> left/right]" << std::endl;
-	std::cout << "[C -> menu]" << std::endl;
+	std::println("----------------------------");
+	std::println("Forza Horizon");
+	std::println("[A/D -> left/right]");
+	std::println("[C -> menu]");
 	initializeForzaHorizon();
 }

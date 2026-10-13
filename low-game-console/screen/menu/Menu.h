@@ -13,11 +13,11 @@ class Menu {
 private:
 	static constexpr int N_REGISTRED = 3;
 
-	static constexpr std::array<MenuNode, N_REGISTRED> _registredGames = { {
-		{"Die Hard", LowGameConsole::ScreenID::DieHard},
-		{"Forza Horizon", LowGameConsole::ScreenID::ForzaHorizon},
-		{"Ship Wars", LowGameConsole::ScreenID::ShipWars}
-	}};
+	static constexpr std::array<MenuNode, N_REGISTRED> _registredGames = {
+		MenuNode{"Die Hard", LowGameConsole::ScreenID::DieHard},
+		MenuNode{"Forza Horizon", LowGameConsole::ScreenID::ForzaHorizon},
+		MenuNode{"Ship Wars", LowGameConsole::ScreenID::ShipWars}
+	};
 
 	int _selectedGame;
 	LowGameConsole::LGC& _console;

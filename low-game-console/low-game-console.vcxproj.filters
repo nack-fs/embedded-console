@@ -54,6 +54,9 @@
     <ClCompile Include="hardware\Joystick.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="hardware\KeypadChip.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="screen\IScreen.h">
@@ -90,6 +93,9 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="hardware\Joystick.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="hardware\KeypadChip.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
