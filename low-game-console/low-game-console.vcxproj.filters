@@ -92,5 +92,8 @@
     <ClInclude Include="hardware\Joystick.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="hardware\KeypadChip.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

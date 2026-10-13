@@ -156,6 +156,7 @@
     <ClInclude Include="allocator\ArenaAllocator.h" />
     <ClInclude Include="console\LGC.h" />
     <ClInclude Include="hardware\Joystick.h" />
+    <ClInclude Include="hardware\KeypadChip.h" />
     <ClInclude Include="screen\die-hard\DieHard.h" />
     <ClInclude Include="screen\die-hard\DieHardAdapter.h" />
     <ClInclude Include="screen\forza-horizon\ForzaHorizon.h" />
