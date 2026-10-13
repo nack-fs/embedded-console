@@ -17,6 +17,6 @@ namespace hardware {
 	}
 
 	void KeypadChip::reset() {
-		_bufferState & 0x00;
+		_bufferState &= 0x00;
 	}
 }
